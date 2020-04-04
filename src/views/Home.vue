@@ -8,8 +8,8 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
-import axios from 'axios'
-// import jsonp from 'jsonp'
+// import axios from 'axios'
+import jsonp from 'jsonp'
 
 export default {
   name: 'Home',
@@ -22,11 +22,12 @@ export default {
     }
   },
   mounted() {
-    let url=" https://easy-mock.com/mock/5e88b16a6e7d856cbee19bc2/example_copy/logon"
-    axios.get(url).then(()=>{ })
-    // jsonp(url,()=>{
-
-    // })
+    let url="https://www.imooc.com/activity/newcomer"
+    // axios.get(url).then(()=>{ })
+    jsonp(url,(err,res)=>{
+      let result = res
+      this.data = result
+    })
 
   },
 }
