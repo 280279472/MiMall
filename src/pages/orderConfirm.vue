@@ -1,5 +1,5 @@
 <template>
-<div class=''>detail</div>
+<div class=''>orderConfirm</div>
 </template>
 
 <script>
